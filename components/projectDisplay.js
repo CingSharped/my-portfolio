@@ -10,9 +10,10 @@ const ProjectDisplay = ({project}) => {
                 <h2>{project.Title}</h2>
             </Link>
             <p>{project.Description}</p>
-                {project.Skills.split(',').map((skill, i) => {
-                    <footer key={i} className="blockquote-footer">{skill}</footer>
-                })}
+            {project.Skills.split(', ').map((skill, i) => {
+                console.log({skill});
+                return <footer key={i}>{"-"}{skill}</footer>
+            })}
         </div>
     )
 }
