@@ -30,7 +30,7 @@ export default function Home({projects}) {
         </h1>
 
         <p className={styles.description}>
-          Welcome to my portfolio!
+          Welcome to my portfolio
         </p>
         <div>
         {projects ? (
