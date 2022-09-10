@@ -44,7 +44,7 @@ export default function Home({projects}) {
       </main>
 
       <footer className={styles.footer}>
-      Email: {email} | Number: {number}
+      Email: {email} | Number: {number} | URL: {process.env.href}
       </footer>
     </div>
   )
