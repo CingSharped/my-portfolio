@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 const ProjectDisplay = ({project}) => {
     return (
         <div className={styles.card}>
-            <Image src={project.Image} width="450px" height="300px" />
+            <Image src={project.Image} width="450px" height="300px" alt={project.Title} />
             <Link href={project.Link}>
                 <h2>{project.Title}</h2>
             </Link>
