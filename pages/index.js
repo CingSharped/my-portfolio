@@ -61,7 +61,7 @@ export default function Home({projectData}) {
 }
 
 
-export const getServerSideProps = async (ctx) => {
+export const getInitialProps = async (ctx) => {
   let dev = process.env.NODE_ENV !== 'production'
   let server = dev ? 'http://localhost:3000/' : 'my-portfolio-tau-beryl.vercel.app'
   const url = (server + 'api/projects')
