@@ -7,7 +7,7 @@ export default function Home({projectData}) {
   const number = "07951575927"
   const projects = projectData ? CreateProjects(projectData) : false
   console.log(projects)
-  console.log(projectData)
+  console.log(this.props.projectData)
   
   const projectExample = {
     Title: "Project Title",
