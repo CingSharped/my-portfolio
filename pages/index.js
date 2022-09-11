@@ -6,6 +6,7 @@ export default function Home({projectData}) {
   const email = "chrismsharpe123@gmail.com"
   const number = "07951575927"
   const projects = projectData ? CreateProjects(projectData) : false
+  console.log(projects)
   
   const projectExample = {
     Title: "Project Title",
