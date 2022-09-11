@@ -2,6 +2,20 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ProjectDisplay from '../components/projectDisplay'
 
+export const getStaticProps = async (ctx) => {
+  let dev = process.env.NODE_ENV !== 'production'
+  let server = dev ? 'http://localhost:3000/' : 'my-portfolio-tau-beryl.vercel.app'
+  const url = (server + 'api/projects')
+  const res = await fetch(url)
+  const projectData = await res.json()
+  return {
+    props:{
+      projectData
+    }
+  }
+}
+
+
 export default function Home({projectData}) {
   const email = "chrismsharpe123@gmail.com"
   const number = "07951575927"
@@ -60,14 +74,7 @@ export default function Home({projectData}) {
   )
 }
 
-export const getStaticProps = async (ctx) => {
-  const url = 'my-portfolio-tau-beryl.vercel.app/api/projects'
-  const res = await fetch(url)
-  const projectData = await res.json()
-  return {
-    props:{
-      projectData
-    }
-  }
-}
+
+
+
 
