@@ -7,6 +7,7 @@ export default function Home({projectData}) {
   const number = "07951575927"
   const projects = projectData ? CreateProjects(projectData) : false
   console.log(projects)
+  console.log(projectData)
   
   const projectExample = {
     Title: "Project Title",
@@ -68,6 +69,7 @@ export const getInitialProps = async (ctx) => {
   const url = (server + 'api/projects')
   const res = await fetch(url)
   const projectData = await res.json()
+  console.log(projectData)
   return {
     props:{
       projectData
