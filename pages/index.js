@@ -61,7 +61,7 @@ export default function Home({projectData}) {
 }
 
 export const getStaticProps = async (ctx) => {
-  const url = ('my-portfolio-tau-beryl.vercel.app/api/projects')
+  const url = 'my-portfolio-tau-beryl.vercel.app/api/projects'
   const res = await fetch(url)
   const projectData = await res.json()
   return {
