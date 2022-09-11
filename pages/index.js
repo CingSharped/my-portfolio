@@ -7,8 +7,6 @@ export default function Home({projectData}) {
   const number = "07951575927"
   const projects = projectData ? CreateProjects(projectData) : false
   console.log(projects)
-  console.log(this.props.projectData)
-  
   const projectExample = {
     Title: "Project Title",
     Description: "This is an awesome description of my project what it is and should do",
@@ -63,7 +61,7 @@ export default function Home({projectData}) {
 }
 
 
-export const getInitialProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   let dev = process.env.NODE_ENV !== 'production'
   let server = dev ? 'http://localhost:3000/' : 'my-portfolio-tau-beryl.vercel.app'
   const url = (server + 'api/projects')
