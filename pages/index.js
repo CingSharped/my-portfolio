@@ -9,7 +9,7 @@ export default function Home({projectData}) {
   
   const projectExample = {
     Title: "Project Title",
-    Description: "This is a description of my project what it is and should do",
+    Description: "This is an awesome description of my project what it is and should do",
     Image: "https://img.itch.zone/aW1nLzQ2ODQ2NDQuanBn/347x500/G46JhY.jpg",
     Link: "https://beastcomplex.itch.io/time-breaker",
     Skills: "Skill 1, Skill 2, Skill 3"
